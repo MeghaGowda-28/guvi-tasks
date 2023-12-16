@@ -8,12 +8,12 @@ public class LibraryManagementApp {
 	public static void main(String[] args) {
 		
 		ArrayList<Book> booksList = new ArrayList<>();
-		/*booksList.add(new Book(12, "Java Fundamentals", "Author1", true));
+		booksList.add(new Book(12, "Java Fundamentals", "Author1", true));
 		booksList.add(new Book(134, "OOPS Pioneer", "Author2", true));
 		booksList.add(new Book(78, "SQL expert", "Author3", true));
 		booksList.add(new Book(28, "Frontend Basics", "Author4", true));
 		booksList.add(new Book(822, "Core Java", "Author5", true));
-		booksList.add(new Book(16, "Core and Advanced Java PRO", "Author7", false));*/
+		booksList.add(new Book(16, "Core and Advanced Java PRO", "Author7", false));
 		
 		Library library = new Library(booksList);
 		
