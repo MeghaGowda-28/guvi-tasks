@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: lightgoldenrodyellow;
+}
+
+#title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkred;
+    text-align: center;
+}
+
+#description{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: grey;
+    padding: 10px;
+    text-align: center;
+}
+
+#container{  
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+#container-list{
+    border-radius: 10px;
+    list-style: none;
+    display: flex;
+    margin-top: 10px;
+    background-color: white;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+#container-list li{
+    padding: 20px 0px;
+}
+
+#container-list li a{
+    color: black;
+    font-size: 20px;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+#container-list li:first-child a{
+    color: darkblue;
+}
+
+#container-list li:last-child a{
+    color: darkblue;
+}
+
+#container-list li a{
+    color: black;
+    font-size: 20px;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+#container-list li a.active{
+    background-color: dodgerblue;
+    border-radius: 10px;
+    color: white;
+}
+
+#container-list li a:hover:not(.active){
+    background-color: #ddd;
+    border-radius: 10px;
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+    
+    #container-list{
+        flex-flow: column;
+    }
+
+    #container-list li{
+        text-align: center;
+    }
+
+    #container-list li a.active{
+        padding: 20px 40px;
+    }
+
+    #container-list li a:hover:not(.prev):not(.next){
+        padding: 20px 40px;
+    }
+}
