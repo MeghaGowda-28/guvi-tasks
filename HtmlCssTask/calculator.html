@@ -9,46 +9,49 @@
     <title>Calculator</title>
 </head>
 <body>
+    <h1 id="title">Calculator</h1>
+
+    <p id="description">Experience the magic of the Calculator, a whimsical tool that combines functionality with a touch of enchantment. Dive into calculations with colorful buttons and a playful design. Whether you're adding, subtracting, multiplying, or dividing, let this calculator make math a delightful experience!</p>
+    
     <div id="calc">
-        <input type="text" id="display" disabled>
+        <input type="text" id="result" disabled>
 
         <br>
 
-        <input type="button" value="C" onclick="clearDisplay()">
-        <input type="button" value="Del" onclick="deleteLast('Del')">
-        <input type="button" value="%" onclick="addToDisplay('%')">
-        <input type="button" value="+" onclick="addToDisplay('+')">
+        <button id="clear" onclick="clearDisplay()">C</button>
+        <button id="delete" onclick="deleteLast()">DEL</button>
+        <button id="modulo" onclick="addToDisplay('%')">%</button>
+        <button id="add" onclick="addToDisplay('+')">+</button>
 
         <br>
 
-        <input type="button" value="9" onclick="addToDisplay('9')">
-        <input type="button" value="8" onclick="addToDisplay('8')">
-        <input type="button" value="7" onclick="addToDisplay('7')">
-        <input type="button" value="-" onclick="addToDisplay('-')">
+        <button onclick="addToDisplay('9')">9</button>
+        <button onclick="addToDisplay('8')">8</button>
+        <button onclick="addToDisplay('7')">7</button>
+        <button id="subtract" onclick="addToDisplay('-')">-</button>
 
         <br>
 
-        <input type="button" value="6" onclick="addToDisplay('6')">
-        <input type="button" value="5" onclick="addToDisplay('5')">
-        <input type="button" value="4" onclick="addToDisplay('4')">
-        <input type="button" value="*" onclick="addToDisplay('*')">
+        <button onclick="addToDisplay('6')">6</button>
+        <button onclick="addToDisplay('5')">5</button>
+        <button onclick="addToDisplay('4')">4</button>
+        <button id="multiply" onclick="addToDisplay('*')">*</button>
 
         <br>
 
-        <input type="button" value="3" onclick="addToDisplay('3')">
-        <input type="button" value="2" onclick="addToDisplay('2')">
-        <input type="button" value="1" onclick="addToDisplay('1')">
-        <input type="button" value="/" onclick="addToDisplay('/')">
+        <button onclick="addToDisplay('3')">3</button>
+        <button onclick="addToDisplay('2')">2</button>
+        <button onclick="addToDisplay('1')">1</button>
+        <button id="divide" onclick="addToDisplay('/')">/</button>
 
         <br>
 
-        <input type="button" value="0" onclick="addToDisplay('0')">
-        <input type="button" value="00" onclick="addToDisplay('00')">
-        <input type="button" value="." onclick="addToDisplay('.')">
-        <input type="button" id="result" value="=" onclick="calculate()">
+        <button onclick="addToDisplay('0')">0</button>
+        <button onclick="addToDisplay('00')">00</button>
+        <button onclick="addToDisplay('.')">.</button>
+        <button id="equal" onclick="calculate()">=</button>
 
     </div>
-    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
     <script src="calculator.js"></script>
 </body>
 </html>

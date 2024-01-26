@@ -6,9 +6,25 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin-top: 50px;
 }
+
+#title{
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: palevioletred;
+    text-align: center;
+}
+
+#description{
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: lightcoral;
+    padding: 10px;
+    text-align: center;
+}
+
 div{
+    margin-top: 30px;
     display: inline-block;
     background-color: lightpink;
     padding: 20px;
@@ -31,7 +47,7 @@ input[type="text"] {
     background-color: gainsboro;
 }
 
-input[type="button"] {
+button {
     width: 100px;
     height: 50px;
     font-size: 16px;
@@ -39,14 +55,26 @@ input[type="button"] {
     color: black;
     font-weight: bolder;
     border: 3px solid rgb(228, 80, 149);
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 2px 2px 5px #888888;
 }
 
-#result {
-    background-color: palevioletred;
+#equal {
+    background-color: lightgreen;
 }
 
-input[type="button"]:hover {
+#delete {
+    background-color: gray;
+}
+
+button:hover {
     background-color: gainsboro;
+}
+
+#clear{
+    background-color: rgb(255, 0, 64);
+}
+
+#add, #subtract, #multiply, #divide, #modulo{
+    background-color: lightskyblue;
 }

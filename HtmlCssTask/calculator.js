@@ -1,14 +1,19 @@
 function addToDisplay(value) {
-    document.getElementById('display').value += value;
+    var display = document.getElementById('result');
+    if (display.value.length < 28) {
+        display.value += value;
+    } else {
+        alert('Maximum character limit reached.');
+    }
 }
 
 function clearDisplay() {
-    document.getElementById('display').value = '';
+    document.getElementById('result').value = '';
 }
 
 function deleteLast() {
-    var currentValue = document.getElementById('display').value;
-    document.getElementById('display').value = currentValue.slice(0, -1);
+    var currentValue = document.getElementById('result').value;
+    document.getElementById('result').value = currentValue.slice(0, -1);
 }
 
 function removeTrailingZeros(str){
@@ -17,7 +22,7 @@ function removeTrailingZeros(str){
 
 function calculate() {
     try {
-        const result = eval(document.getElementById('display').value);
+        const result = eval(document.getElementById('result').value);
         let formattedResult;
         if(Number.isInteger(result)){
             formattedResult = result.toString();
@@ -25,9 +30,9 @@ function calculate() {
         else{
             formattedResult = removeTrailingZeros(result.toFixed(3));
         }
-        document.getElementById('display').value = formattedResult;
+        document.getElementById('result').value = formattedResult;
     } catch (error) {
-        document.getElementById('display').value = 'Error';
+        document.getElementById('result').value = 'Error';
     }
 }
 
@@ -41,7 +46,7 @@ document.addEventListener('keydown', function (event) {
         if (key === 'Enter') {
             calculate();
         } else if (key === 'Escape') {
-            clearDisplay();
+            clearresult();
         } else if (key === 'Backspace') {
             deleteLast();
         } else {
