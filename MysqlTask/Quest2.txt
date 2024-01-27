@@ -1,0 +1,34 @@
+use guvi;
+
+
+
+create table Employees (
+
+empcode int auto_increment primary key,
+
+empname varchar(20),
+
+empage int,
+
+esalary double) 
+auto_increment=100;
+
+
+
+insert into Employees(empname, empage, esalary)
+
+values 
+('Jenny', 25, 10000),
+
+('Jacky', 30, 20000),
+
+('Joe', 20, 40000),
+
+('John', 40, 80000),
+
+('Shameer', 25, 90000);
+
+
+
+select * from Employees;
+

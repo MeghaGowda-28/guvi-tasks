@@ -1,0 +1,79 @@
+use guvi;
+
+
+
+create table Empl(
+
+empno int auto_increment primary key,
+
+ename varchar(20),
+
+job varchar(20),
+
+mgr int,
+
+hiredate date,
+
+sal double,
+
+comm double,
+
+deptno int
+)
+auto_increment=8000;
+
+
+
+
+
+insert into Empl(ename, job, mgr, hiredate, sal, comm, deptno) 
+
+values 
+
+('smith', 'clerk', 8902, '1990-12-18', 800, null, 20),
+
+('anya', 'salesman', 8698, '1991-02-20', 1600, 300, 30),
+
+('seth', 'salesman', 8698, '1991-02-22', 1250, 500, 30),
+
+('mahadevan', 'manager', 8839, '1991-04-02', 2985, null, 20),
+
+('momin', 'salesman', 8698, '1991-09-28', 1250, 1400, 30),
+
+('bina', 'manager', 8839, '1991-05-01', 2850, null, 30),
+
+('shivansh', 'manager', 8839, '1991-06-09', 2450, null, 10),
+
+('scott', 'analyst', 8566, '1992-12-09', 3000, null, 20),
+
+('amir', 'president', null, '1991-11-18', 5000, null, 10),
+
+('kuldeep', 'salesman', 8698, '1991-09-08', 1500, 0, 30);
+
+
+
+select * from Empl;
+
+
+A. 
+select ename, sal from Empl where sal>=2200;
+
+
+
+B. select * from Empl where isnull(comm);
+
+
+
+C. select ename, sal from Empl where sal not between 2500 and 4000;
+
+
+
+D. select ename, job, sal from Empl where isnull(mgr);
+
+
+
+E. select ename from Empl where ename like '___a%'; #012a%
+
+
+
+F. select ename from Empl where ename like '%t';
